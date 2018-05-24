@@ -1,3 +1,5 @@
+# 一、类型和变量
+
 print ('''helo \n
 python''')
 
