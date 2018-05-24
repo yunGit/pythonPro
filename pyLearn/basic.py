@@ -20,7 +20,7 @@ print(not b)
 n = None
 print(n)
 
-# 全部大写的变量名表示常量
+# 全部大写的变量名表示常量，约定俗成
 PI = 3.1415926
 print(PI)
 PI = 5
