@@ -62,3 +62,54 @@ def person(name, age, **kw):
 
 person('Michael', 30)
 person('Bob', 35, city = 'Beigjing', job='Engineer')
+
+# 
+# 如果要限制关键字参数的名字，则可以用命名关键字参数，需要一个特殊分隔符 * , * 后面的参数被视为命名关键字参数
+# 命名关键字参数调用时必须传入参数名，否则报错
+# 
+def person2(name, age, *, city, job):
+	print(name, age, city, job)
+
+person2('Jack', 24, city='Beigjing', job='Engineer')
+# person2('hi', 1, 'beijing', 'chushi')
+
+
+# 
+# 		参数组合
+# 		
+# 	定义函数时，必选参数、默认参数、可变参数、关键字参数和命名关键字参数，可以组合使用
+# 	注意：参数定义的顺序必须是：必选参数、默认参数、可变参数、命名关键字参数和关键字参数
+# 	
+def f1(a, b, c=0, *, d, **kw):
+	print('a = ', a, ', b = ', b, ', c = ', c, ', d = ', d, ', kw = ', kw)
+def f2(a, b, c=0, *args, **kw):
+	print('a = ', a, ', b = ', b, ', c = ', c, ', args = ', args, ', kw = ', kw)
+
+f1(10, 5, 8, d=0)
+f2(10, 5, 3, 9, 90, 40, r=10)
+
+def product(x, y=1, *args):
+	pro = 1
+	for v in args:
+		pro *= v
+	return x * y * pro
+
+# 测试
+print('product(5) =', product(5))
+print('product(5, 6) =', product(5, 6))
+print('product(5, 6, 7) =', product(5, 6, 7))
+print('product(5, 6, 7, 9) =', product(5, 6, 7, 9))
+if product(5) != 5:
+    print('测试失败!')
+elif product(5, 6) != 30:
+    print('测试失败!')
+elif product(5, 6, 7) != 210:
+    print('测试失败!')
+elif product(5, 6, 7, 9) != 1890:
+    print('测试失败!')
+else:
+    try:
+        product()
+        print('测试失败!')
+    except TypeError:
+        print('测试成功!')
