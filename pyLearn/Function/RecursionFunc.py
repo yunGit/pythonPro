@@ -6,7 +6,7 @@ def fact(n):
 		return 1
 	return n * fact(n-1)
 
-print(fact(900))
+# print(fact(900))
 # print(fact(1000))		# 栈溢出
 
 # 
@@ -18,4 +18,23 @@ def factTail(n, product):
 		return product
 	return factTail(n - 1, n * product)
 
-print(factTail(900, 1))
+# print(factTail(900, 1))
+
+
+# 汉诺塔
+# 
+def move(n, a, b, c):
+	if n == 1:
+		print(a, '-->', c)
+		return
+	else:
+		move(n-1, a, c, b)
+		move(1, a, b, c)
+		move(n-1, b, a, c)
+
+print('move 1--------------------------')
+move(1, 'a', 'b', 'c')
+print('move 2--------------------------')
+move(2, 'a', 'b', 'c')
+print('move 3--------------------------')
+move(3, 'a', 'b', 'c')
