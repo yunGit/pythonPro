@@ -32,9 +32,6 @@ def move(n, a, b, c):
 		move(1, a, b, c)
 		move(n-1, b, a, c)
 
-print('move 1--------------------------')
-move(1, 'a', 'b', 'c')
-print('move 2--------------------------')
-move(2, 'a', 'b', 'c')
-print('move 3--------------------------')
-move(3, 'a', 'b', 'c')
+n = input('Input hano high:')
+print('Next is move step:')
+move(n, 'A', 'B', 'C')
