@@ -33,5 +33,6 @@ def move(n, a, b, c):
 		move(n-1, b, a, c)
 
 n = input('Input hano high:')
+n = int(n)
 print('Next is move step:')
 move(n, 'A', 'B', 'C')
