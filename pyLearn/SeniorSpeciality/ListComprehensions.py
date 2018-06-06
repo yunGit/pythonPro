@@ -33,5 +33,9 @@ print([d for d in os.listdir('/')])	# os.listdir() 可列出文件和目录
 d = {'x':'A', 'y':'B', 'z':'C'}
 print([k + ' = '+ v for k, v in d.items()])
 
-# 把一个list中所有的字符串编程小写
-LS
+# 把一个list中所有的字符串变成小写
+LS = ['Hello', 'World', 'IBM', 'Apple', 19, None]
+print([s.lower() for s in LS if isinstance(s, str)])
+
+
+
