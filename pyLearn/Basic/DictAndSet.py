@@ -11,6 +11,8 @@ print(d['Adam'])
 d['Adam'] = 90
 print(d['Adam'])
 
+print(len(d))
+
 # 如果 key 不存在， 报错
 # print(d['zhang'])
 # 
@@ -65,3 +67,5 @@ s1 = set([1, 2, 3])
 s2 = set([2, 3, 5])
 print(s1 & s2)
 print(s1 | s2)
+
+print(len(s1))

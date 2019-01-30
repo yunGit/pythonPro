@@ -25,14 +25,15 @@ classmates[0] = "zhangsan"
 print(classmates)
 
 # list 元素类型可以不同
-L = ['Apple', 123, True]
+L = ['Apple', 123, True, 789]
 S = ['python', 'java', L, 'Scheme']
 print(S, len(S))
+print(L, len(L))
 
 
 
 # 另一种有序列表叫元组：tuple，一旦初始化不能改变
-classmatesT = ('Michael', 'Bob', 'Tracy')
+classmatesT = ('Michael', 'Bob', 123, 'Tracy', 890)
 print(classmatesT)
 
 # classmatesT[0] = 'zhangsan' # 报错
