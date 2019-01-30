@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 # 
 #  计算买房相关
 
@@ -22,6 +22,7 @@ def EquivalentPrincipal(amount, totalMonths, interestMonthRate, monthNow, princi
     # 每月还款本金
     if principalPerMonth == None:
         principalPerMonth = amount / totalMonths;
+        print("PerMonth %.2f %f" %(principalPerMonth, principalPerMonth))
 
     # 剩余本金
     principalLast = amount - principalHasPay;
