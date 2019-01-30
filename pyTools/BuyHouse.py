@@ -21,14 +21,14 @@ def EquivalentPrincipal(amount, totalMonths, interestMonthRate, monthNow, princi
 
     # 每月还款本金
     if principalPerMonth == None:
-        principalPerMonth = round(amount / totalMonths, 2);
+        principalPerMonth = amount / totalMonths, 2;
 
     # 剩余本金
     principalLast = amount - principalHasPay;
     if principalLast <= 0:
         return;
     # 当月利息
-    interestThisMonth = round(principalLast * interestMonthRate, 2);
+    interestThisMonth = principalLast * interestMonthRate;
     # 当月还款总额
     totalPriceThisMonth = principalPerMonth + interestThisMonth;
 
