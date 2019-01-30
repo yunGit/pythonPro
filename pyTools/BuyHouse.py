@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+#-*- coding: utf-8 -*-
 # 
 #  计算买房相关
 
@@ -50,6 +50,6 @@ def EquivalentPrincipal(amount, totalMonths, interestMonthRate, monthNow, princi
 # 
 # 等额本息
 #
-def EquivalentInterest(amount, months, interestMonthRate)
+# def EquivalentInterest(amount, months, interestMonthRate)
 
 EquivalentPrincipal(520000, 360, 0.429 / 12, 1, 0, 0, None, None)
