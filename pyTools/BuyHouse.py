@@ -33,7 +33,8 @@ def EquivalentPrincipal(amount, totalMonths, interestMonthRate, monthNow, princi
     totalPriceThisMonth = principalPerMonth + interestThisMonth;
 
     # 还款操作
-    print("------, 还款，第 ", monthNow, " 月，本月还款总额：", totalPriceThisMonth, "，本月本金：", principalPerMonth, "，本月利息：", interestThisMonth)
+    print("\n----------------------------------------------------------------------------------------------\n")
+    print ("-------, 还款，第 %d 月，本月还款总额：%.2f，本月本金：%.2f，本月利息：%.2f" %(monthNow, totalPriceThisMonth, principalPerMonth, interestThisMonth));
 
     # 已还本金
     principalHasPay = principalHasPay + principalPerMonth;
@@ -44,7 +45,8 @@ def EquivalentPrincipal(amount, totalMonths, interestMonthRate, monthNow, princi
     # 剩余利息
     interestLast = interestTotal - interestHasPay;
 
-    print("$$$$$$$，已还本金：", principalHasPay, "，已还利息：", interestHasPay, "，剩余本金：", principalLast, "，剩余利息：", interestLast);
+    print("$$$$$$$, 已还本金：%.2f，已还利息：%.2f，剩余本金：%.2f，剩余利息：%.2f" %(principalHasPay, interestHasPay, principalLast, interestLast));
+
 
     EquivalentPrincipal(amount, totalMonths, interestMonthRate, monthNow + 1, principalHasPay, interestHasPay, interestTotal, principalPerMonth);
     
@@ -53,4 +55,5 @@ def EquivalentPrincipal(amount, totalMonths, interestMonthRate, monthNow, princi
 #
 # def EquivalentInterest(amount, months, interestMonthRate)
 
-EquivalentPrincipal(520000, 360, 0.429 / 12, 1, 0, 0, None, None)
+EquivalentPrincipal(520000, 360, 0.04312 / 12, 1, 0, 0, None, None)
+print("\n----------------------------------------------------------------------------------------------\n")
